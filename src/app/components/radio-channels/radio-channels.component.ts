@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RadioChannelsService } from './radio-channels.service';
+import { RadioChannelsService } from '../../services/radio-channels.service';
 
 @Component({
   selector: 'app-radio-channels',

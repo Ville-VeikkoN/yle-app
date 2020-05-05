@@ -1,0 +1,19 @@
+.guide-container {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  align-self: flex-start;
+  max-width: 300px;
+  margin: 50px;
+  border: 1px solid;
+
+}
+
+.channel-container {
+  border: 1px solid;
+  border-radius: 3px;
+}

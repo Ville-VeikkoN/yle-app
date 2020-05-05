@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { RadioChannelsComponent } from './radio-channels/radio-channels.component';
-import { TvProgramsComponent } from './tv-programs/tv-programs.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { RadioChannelsComponent } from './components/radio-channels/radio-channels.component';
+import { TvProgramsComponent } from './components/tv-programs/tv-programs.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const appRoutes: Routes = [
   { path: 'radio', component: RadioChannelsComponent },
