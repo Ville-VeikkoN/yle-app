@@ -1,5 +1,9 @@
 <app-guide></app-guide>
 
+<input #search (keyup.enter)="doSearch(search.value)" />
+<button (click)="doSearch(search.value)">Search</button>
+<p>Näytetään: {{searchValue}}</p>
+
 <div class="currently-container">
   <div class="card" *ngFor="let program of programsArray">
       <img class="img" src="http://images.cdn.yle.fi/image/upload/{{program.image.id}}.jpg">

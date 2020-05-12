@@ -2,15 +2,18 @@
   display:flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  padding: 50px;
+}
+
+.guide-item {
+  display: flex;
+  width: 32%;
+  flex-direction: column;
 }
 
 img {
-  align-self: flex-start;
+  align-self: center;
   max-width: 300px;
-  margin: 50px;
-  border: 1px solid;
-
 }
 
 .channel-container {

@@ -1,28 +1,27 @@
 <div class="guide-container">
 
-  <span></span>
-  <div class="yle-tv1">
+  <div class="guide-item">
     <img src='../../../assets/Yle-TV1-HD-Black-RGB-vertical.png'/>
-    <div class="channel-container" *ngFor="let porgramData of yleTv1Programs">
-      <p>ohjelma</p>
+    <div class="channel-container" *ngFor="let programData of yleTv1Programs">
+      <p>{{programData.content.title.fi}}</p>
+      <p>{{programData.startTime}}</p>
     </div>
   </div>
 
-  <div class="yle-tv2">
+  <div class="guide-item">
     <img src='../../../assets/Yle-TV2-HD-Black-RGB-vertical.png'/>
-    <div class="channel-container" *ngFor="let porgramData of yleTv2Programs">
-      <p>ohjelma</p>
-
+    <div class="channel-container" *ngFor="let programData of yleTv2Programs">
+      <p>{{programData.content.title.fi}}</p>
+      <p>{{programData.startTime}}</p>
     </div>
   </div>
 
-  <div class="yle-areena">
+  <div class="guide-item">
     <img src='../../../assets/yle-areena-black.png'/>
-    <div class="channel-container" *ngFor="let porgramData of yleAreenaPrograms">
-      <p>ohjelma</p>
-
+    <div class="channel-container" *ngFor="let programData of yleAreenaPrograms">
+      <p>{{programData.content.title.fi}}</p>
+      <p>{{programData.startTime}}</p>
     </div>
   </div>
-  <span></span>
 
 </div>
