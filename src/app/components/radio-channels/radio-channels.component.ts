@@ -14,7 +14,7 @@ export class RadioChannelsComponent implements OnInit {
   constructor(private radioChannelsService: RadioChannelsService) { }
 
   ngOnInit() {
-    this.radioChannelsService.fetchRadioChannels((res) => {
+    this.radioChannelsService.fetchRadioChannels('ylex' , (res) => {
       this.radioArray = JSON.parse(res).data;
     });
   }

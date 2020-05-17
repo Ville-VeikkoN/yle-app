@@ -23,6 +23,9 @@ export class TvProgramsComponent implements OnInit {
   doSearch(value) {
     if (value !== '') {
       this.searchValue = value;
+      this.tvProgramsService.fetchSearchedPrograms(this.searchValue, (res) => {
+        this.programsArray = JSON.parse(res).data;
+      });
     } else {
       this.searchValue = 'poiminnat';
     }

@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class RadioChannelsService {
   constructor(private http: HttpClient) { }
 
-  fetchRadioChannels(callBackFunction: (result) => void): void {
-    this.http.get('http://localhost:3000/radio').subscribe(response => {
+  fetchRadioChannels(radioChannel, callBackFunction: (result) => void): void {
+    this.http.get(`http://localhost:3000/radio/${radioChannel}`).subscribe(response => {
       callBackFunction(response);
     });
   }
