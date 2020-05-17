@@ -10,6 +10,6 @@
   height: 20%;
 }
 
-.img {
-  max-width: 50%;
+img {
+  width: 300px;
 }

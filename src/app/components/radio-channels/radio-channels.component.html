@@ -1,5 +1,14 @@
-<div>
-  <div *ngFor="let data of radioArray">
-    <img src="../../../assets/">
-  </div>
+<div *ngIf="radioData" class="container">
+    <a href={{radioData.homepage.url}}>
+      <img src="../../../assets/ylex.png">
+    </a>
+
+    <p>Nyt soitossa</p>
+    
+    <div class="interactions-container" >
+      <div *ngFor="let media of radioData.interaction">
+        <p>{{media.title.fi}}</p>
+      </div>
+    </div>
+    
 </div>

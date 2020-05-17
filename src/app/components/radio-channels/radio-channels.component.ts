@@ -9,13 +9,19 @@ import { RadioChannelsService } from '../../services/radio-channels.service';
 export class RadioChannelsComponent implements OnInit {
   title = 'radio';
 
-  radioArray = [];
-
+  channel = 'ylex';
+  radioData;
+  nowPlaying;
   constructor(private radioChannelsService: RadioChannelsService) { }
 
   ngOnInit() {
-    this.radioChannelsService.fetchRadioChannels('ylex' , (res) => {
-      this.radioArray = JSON.parse(res).data;
+    this.radioChannelsService.fetchRadioChannel(this.channel , (res) => {
+      this.radioData = JSON.parse(res).data;
+    });
+
+    this.radioChannelsService.fetchRadioNowPlaying(this.channel , (res) => {
+      this.nowPlaying = JSON.parse(res).data;
+      console.log(this.nowPlaying)
     });
   }
 
