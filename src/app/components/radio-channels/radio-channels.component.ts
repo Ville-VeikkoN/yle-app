@@ -25,7 +25,7 @@ export class RadioChannelsComponent implements OnInit {
     });
   }
 
-  checkCurrentSong(songStartTime, songEndTime) {
+  checkCurrentSong(songStartTime: string, songEndTime: string) {
     const currentTime = new Date();
     const startTime = new Date(songStartTime);
     const endTime = new Date(songEndTime);

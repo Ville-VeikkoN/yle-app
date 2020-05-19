@@ -30,7 +30,7 @@ export class TvProgramsService {
     });
   }
 
-  fetchSearchedPrograms(searchValue, callBackFunction: (result) => void): void {
+  fetchSearchedPrograms(searchValue: string, callBackFunction: (result) => void): void {
     this.http.get(`http://localhost:3000/searched/${searchValue}`).subscribe(response => {
       console.log(response);
       callBackFunction(response);

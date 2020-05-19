@@ -28,7 +28,7 @@ export class GuideComponent implements OnInit {
     });
   }
 
-  checkProgramNotEnded(endTime) {
+  checkProgramNotEnded(endTime: string) {
     const currentTime = new Date();
     const programEndTime = new Date(endTime);
     if (programEndTime > currentTime) {

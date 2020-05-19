@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TimeFormatPipe implements PipeTransform {
 
-  transform(value): string {
+  transform(value: string): string {
     if (typeof value === 'undefined') {
       return '';
     }
