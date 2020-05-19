@@ -11,7 +11,6 @@ export class GuideComponent implements OnInit {
   yleTv1Programs = [];
   yleTv2Programs = [];
   yleAreenaPrograms = [];
-  currentTime = new Date();
 
   constructor(private tvProgramsService: TvProgramsService) { }
 
@@ -30,8 +29,9 @@ export class GuideComponent implements OnInit {
   }
 
   checkProgramNotEnded(endTime) {
+    const currentTime = new Date();
     const programEndTime = new Date(endTime);
-    if (programEndTime > this.currentTime) {
+    if (programEndTime > currentTime) {
       return true;
     }
     return false;

@@ -21,8 +21,19 @@ export class RadioChannelsComponent implements OnInit {
 
     this.radioChannelsService.fetchRadioNowPlaying(this.channel , (res) => {
       this.nowPlaying = JSON.parse(res).data;
-      console.log(this.nowPlaying)
+      console.log(this.nowPlaying )
     });
+  }
+
+  checkCurrentSong(songStartTime, songEndTime) {
+    const currentTime = new Date();
+    const startTime = new Date(songStartTime);
+    const endTime = new Date(songEndTime);
+
+    if (startTime < currentTime && endTime > currentTime) {
+      return true;
+    }
+    return false;
   }
 
 }

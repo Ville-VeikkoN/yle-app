@@ -3,11 +3,16 @@
       <img src="../../../assets/ylex.png">
     </a>
 
-    <p>Nyt soitossa</p>
-    
-    <div class="interactions-container" >
-      <div *ngFor="let media of radioData.interaction">
-        <p>{{media.title.fi}}</p>
+    <div *ngIf="nowPlaying">
+      <p class="largetitle" *ngIf="nowPlaying">{{nowPlaying[0].partOf.title.fi}}</p>
+      <div *ngFor="let song of nowPlaying">
+        <div class="row.title">
+          <div class="centertitle" [ngClass]="{'current': checkCurrentSong(song.startTime, song.endTime)}">
+            {{song.content.performer[0].name}}
+            :
+            {{song.content.title.unknown}}
+          </div>
+        </div>
       </div>
     </div>
     

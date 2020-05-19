@@ -19,3 +19,7 @@ img {
   display: flex;
   flex-direction: row;
 }
+
+.current {
+  color: white;
+}
