@@ -9,6 +9,8 @@ import { TvProgramsComponent } from './components/tv-programs/tv-programs.compon
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { GuideComponent } from './components/guide/guide.component';
+import { DateFormatPipe } from './pipes/date-format.pipe';
+import { TimeFormatPipe } from './pipes/time-format.pipe';
 
 
 
@@ -18,7 +20,9 @@ import { GuideComponent } from './components/guide/guide.component';
     TvProgramsComponent,
     RadioChannelsComponent,
     NotFoundComponent,
-    GuideComponent
+    GuideComponent,
+    DateFormatPipe,
+    TimeFormatPipe
   ],
   imports: [
     BrowserModule,

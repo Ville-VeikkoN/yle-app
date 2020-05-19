@@ -1,26 +1,32 @@
 <div class="guide-container">
 
   <div class="guide-item">
-    <img src='../../../assets/yle-tv1.png'/>
-    <div class="channel-container" *ngFor="let programData of yleTv1Programs">
-      <p>{{programData.content.title.fi}}</p>
-      <p>{{programData.startTime}}</p>
+    <img src='../../../assets/yle-tv1-guide.png'/>
+    <div *ngFor="let programData of yleTv1Programs">
+      <div class="channel-container"  *ngIf="checkProgramNotEnded(programData.endTime)">
+        <p class="boldtitle">{{programData.startTime | timeFormat}}</p>
+        <p class="title">{{programData.content.title.fi}}</p>
+      </div>
     </div>
   </div>
 
   <div class="guide-item">
-    <img src='../../../assets/yle-tv2.png'/>
-    <div class="channel-container" *ngFor="let programData of yleTv2Programs">
-      <p>{{programData.content.title.fi}}</p>
-      <p>{{programData.startTime}}</p>
+    <img src='../../../assets/yle-tv2-guide.png'/>
+    <div *ngFor="let programData of yleTv2Programs">
+      <div class="channel-container"  *ngIf="checkProgramNotEnded(programData.endTime)">
+        <p class="boldtitle">{{programData.startTime | timeFormat}}</p>
+        <p class="title">{{programData.content.title.fi}}</p>
+      </div>
     </div>
   </div>
 
   <div class="guide-item">
-    <img src='../../../assets/yle-areena.png'/>
-    <div class="channel-container" *ngFor="let programData of yleAreenaPrograms">
-      <p>{{programData.content.title.fi}}</p>
-      <p>{{programData.startTime}}</p>
+    <img src='../../../assets/areena-guide.png'/>
+    <div *ngFor="let programData of yleAreenaPrograms">
+      <div class="channel-container"  *ngIf="checkProgramNotEnded(programData.endTime)">
+        <p class="boldtitle">{{programData.startTime | timeFormat}}</p>
+        <p class="title">{{programData.content.title.fi}}</p>
+      </div>
     </div>
   </div>
 

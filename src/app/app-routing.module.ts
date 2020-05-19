@@ -6,8 +6,8 @@ import { TvProgramsComponent } from './components/tv-programs/tv-programs.compon
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const appRoutes: Routes = [
-  { path: 'radio', component: RadioChannelsComponent },
   { path: 'tv', component: TvProgramsComponent },
+  { path: 'radio', component: RadioChannelsComponent },
   { path: '', redirectTo: 'tv', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent }
 ];
