@@ -1,0 +1,40 @@
+<div class="link">Haku. Halutessasi voit katsoa myös &nbsp; <a [routerLink]="['/tv/guide']"> ohjelmatietoja</a></div>
+
+
+<div class="container">
+
+  <div class="searchbox">
+    <input #search (keyup.enter)="doSearch(search.value)" />
+    <button (click)="doSearch(search.value)">Search</button>
+    <p>Näytetään: {{searchValue}}</p>
+  </div>
+
+  <div class="card" *ngFor="let program of programsArray">
+    <div class="row">
+      <p class="largeboldtitle">{{ program.publicationEvent[0].startTime | dateFormat}}</p>
+      <p class="largeboldtitle">{{ program.publicationEvent[0].service.id }}</p>
+    </div>
+          
+    <div class="row">
+      <p class="boldtitle">{{ program.publicationEvent[0].startTime | timeFormat }}</p>
+      <p class="boldtitle">-</p>
+      <p class="boldtitle">{{ program.publicationEvent[0].endTime | timeFormat }}</p>
+    </div>
+
+    <p class="largetitle">{{ program.title.fi }}</p>
+
+    <div class="img-container"
+      [ngTemplateOutlet]="program.image.available ? programImg : channelImg" 
+      [ngTemplateOutletContext]="{program: program}">
+    </div>
+    <p class="description">{{program.description.fi}}</p>
+  </div>
+</div>
+
+<ng-template #programImg let-program="program">
+  <img class="img" src="http://images.cdn.yle.fi/image/upload/w_300,h_300,c_fit/{{program.image.id}}.jpg">
+</ng-template>
+
+<ng-template #channelImg let-program="program"> 
+  <img class="img" src="../../../assets/{{program.publicationEvent[0].service.id}}.png" onerror="this.src=''">
+</ng-template>

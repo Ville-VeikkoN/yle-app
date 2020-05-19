@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { GuideComponent } from './components/guide/guide.component';
 import { DateFormatPipe } from './pipes/date-format.pipe';
 import { TimeFormatPipe } from './pipes/time-format.pipe';
+import { SearchComponent } from './components/search/search.component';
 
 
 
@@ -22,7 +23,8 @@ import { TimeFormatPipe } from './pipes/time-format.pipe';
     NotFoundComponent,
     GuideComponent,
     DateFormatPipe,
-    TimeFormatPipe
+    TimeFormatPipe,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
