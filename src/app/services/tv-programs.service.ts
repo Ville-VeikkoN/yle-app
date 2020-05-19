@@ -14,24 +14,24 @@ export class TvProgramsService {
   }
 
   fetchChannelTV1(callBackFunction: (result) => void): void {
-    this.http.get('http://localhost:3000/yletv1').subscribe(response => {
+    this.http.get('/yletv1').subscribe(response => {
       callBackFunction(response);
     });
   }
 
   fetchChannelTV2(callBackFunction: (result) => void): void {
-    this.http.get('http://localhost:3000/yletv2').subscribe(response => {
+    this.http.get('/yletv2').subscribe(response => {
       callBackFunction(response);
     });
   }
   fetchYleAreena(callBackFunction: (result) => void): void {
-    this.http.get('http://localhost:3000/yleareena').subscribe(response => {
+    this.http.get('/yleareena').subscribe(response => {
       callBackFunction(response);
     });
   }
 
   fetchSearchedPrograms(searchValue: string, callBackFunction: (result) => void): void {
-    this.http.get(`http://localhost:3000/searched/${searchValue}`).subscribe(response => {
+    this.http.get(`/searched/${searchValue}`).subscribe(response => {
       console.log(response);
       callBackFunction(response);
     });
